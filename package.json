@@ -1,0 +1,53 @@
+{
+  "name": "@osspim/react-dialog",
+  "version": "5.0.0-beta.1",
+  "description": "Accessible dialogs in React used in OSSPIM Headless PIM",
+  "keywords": [
+    "react",
+    "dialog",
+    "confirm",
+    "alert",
+    "accessibility",
+    "a11y"
+  ],
+  "main": "dist/index.js",
+  "source": "src/index.js",
+  "module": "dist/index.module.js",
+  "unpkg": "dist/index.umd.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ossgroupp/react-dialog.git"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=development parcel ./public/index.html",
+    "build": "microbundle --jsx React.createElement",
+    "prepare": "npm run build",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook:build": "build-storybook -c .storybook -o demo"
+  },
+  "exports": {
+    ".": "./dist/index.module.js"
+  },
+  "author": "OSSPIM <hello@ossgroup.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ossgroupp/react-dialog/issues"
+  },
+  "homepage": "https://github.com/ossgroupp/react-dialog#readme",
+  "dependencies": {
+    "a11y-dialog": "^5.5.2"
+  },
+  "devDependencies": {
+    "@storybook/react": "^6.1.21",
+    "faker": "^4.1.0",
+    "microbundle": "^0.13.0",
+    "parcel-bundler": "^1.12.4",
+    "prop-types": "15.6.2",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "styled-components": "^5.2.1"
+  },
+  "peerDependencies": {
+    "styled-components": ">=4"
+  }
+}
